@@ -40,6 +40,9 @@ You can check whether the resource quota is applied successfully to the namespac
 kubectl describe namespace demo
 ```
 
+<img width="466" alt="Screenshot 2021-05-26 at 16 17 12" src="https://user-images.githubusercontent.com/82048393/119686096-e3427d00-be3d-11eb-94d9-3558fc06818e.png">
+
+
 Now, try to create 2 pods that use 1 CPU 
 ```
 kubectl apply -f nginx-cpu-1.yaml --namespace demo
