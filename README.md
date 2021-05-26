@@ -14,7 +14,7 @@ kubectl create namespace demo
 
 In the case of AKS, no resource quota is enforced in your default namespace:
 
-<img width="401" alt="Screenshot 2021-05-26 at 16 04 16" src="https://user-images.githubusercontent.com/82048393/119684364-5b0fa800-be3c-11eb-8954-27088288ab1a.png">
+<img width="390" alt="Screenshot 2021-05-26 at 16 23 02" src="https://user-images.githubusercontent.com/82048393/119686936-b2af1300-be3e-11eb-8a37-792ba7a4ca0f.png">
 
 
 Define a resource quota. ie: resource request CPU = 1 CPU:
