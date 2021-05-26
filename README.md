@@ -12,6 +12,11 @@ Let's see what happens when resource quotas are applied to a newly-created names
 kubectl create namespace demo
 ```
 
+In the case of AKS, no resource quota is enforced in your default namespace:
+
+<img width="401" alt="Screenshot 2021-05-26 at 16 04 16" src="https://user-images.githubusercontent.com/82048393/119684364-5b0fa800-be3c-11eb-8954-27088288ab1a.png">
+
+
 Define a resource quota. ie: resource request CPU = 1 CPU:
 ```
 cat quota.yaml
