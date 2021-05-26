@@ -19,7 +19,7 @@ In the case of AKS, no resource quota is enforced in your default namespace:
 
 Define a resource quota. ie: resource request CPU = 1 CPU:
 ```
-cat quota.yaml
+cat  << EOF > quota.yaml
 apiVersion: v1
 kind: ResourceQuota
 metadata:
@@ -27,6 +27,7 @@ metadata:
 spec:
   hard:
     requests.cpu: "1"
+EOF    
 ```
 
 Apply the quota to the namespace by using the following command:
