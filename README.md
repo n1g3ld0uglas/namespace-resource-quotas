@@ -60,20 +60,18 @@ EOF
 
 This pod inititates a stress process that tries to allocate memory of 150M at startup.
 
-If no limits are specified within the .yaml specification, the pod runs without any issues:
+If no limits are specified within the .yaml specification, the pod runs without any issue in the default namespace:
 
 ```
 kubectl create -f stress.yaml
 ```
 
-Now, try to create 2 pods that use 1 CPU 
+Now, try and create the same pod in the 'demo' namespace. This should fail with a resource quota error
 ```
-kubectl apply -f nginx-cpu-1.yaml --namespace demo
+kubectl create -f stress.yaml
 ```
 
-The 2nd request will fail with the following error
-```
-Error from server (Forbidden): error when creating "nginx-cpu-1.yaml": pods "demo-1" is forbidden: exceeded quota: compute-resources, requested: requests.cpu=1, used: requests.cpu=1, limited: requests.cpu=1
-```
+<img width="1146" alt="Screenshot 2021-05-26 at 16 52 38" src="https://user-images.githubusercontent.com/82048393/119692088-07ed2380-be43-11eb-8677-3e62285946e3.png">
+
 
 Resource limits ensure quality of service for namespaced Kubernetes objects.
