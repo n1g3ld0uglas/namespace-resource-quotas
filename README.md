@@ -54,7 +54,7 @@ spec:
     - name: demo
       image: polinux/stress
       command: ["stress"]
-      arg: ["--vm", "1", "--vm-bytes", "150M", "--vm-hang", "1"]
+      args: ["--vm", "1", "--vm-bytes", "150M", "--vm-hang", "1"]
 EOF 
 ```
 
