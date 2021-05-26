@@ -58,7 +58,8 @@ spec:
 EOF 
 ```
 
-This pod inititates a stress process that tries to allocate memory of 150M at stratup.
+This pod inititates a stress process that tries to allocate memory of 150M at startup.
+
 If no limits are specified within the .yaml specification, the pod runs without any issues:
 
 ```
