@@ -3,6 +3,9 @@ Resource Quotas for Namespaces help define the resource requests and limits avai
 
 By default, cloud providers or dufferent K8 flavours have standard limits applied to the namespace. 
 On GKE, the 'cpu request' is set to 0.1 cores. You can check this via kubectl describe command.
+
+<img width="596" alt="Screenshot 2021-05-27 at 10 38 34" src="https://user-images.githubusercontent.com/82048393/119803939-cfe3f000-bed7-11eb-83e9-aa4b879c583a.png">
+
 ```
 kubectl describe namespace default
 ```
